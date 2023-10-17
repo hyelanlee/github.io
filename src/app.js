@@ -3,15 +3,17 @@ const ctx = canvas.getContext("2d");
 const colorOptions = Array.from(document.getElementsByClassName("color-option"));
 const lineWidth = document.getElementById("line-width");
 const color = document.getElementById("color");
-const modeBtn = document.getElementById("mode-btn");
 const destroyBtn = document.getElementById("destroy-btn")
 const eraseBtn = document.getElementById("erase-btn");
+const undoBtn = document.getElementById("undo-btn");
 const file = document.getElementById("file");
 const textInput = document.getElementById("text");
 const saveBtn = document.getElementById("save");
 const fontSizeRange = document.getElementById("font-size");
 const strokeStyle = document.querySelector(".font-btn-wrapper .font-style:nth-child(1)");
 const fillStyle = document.querySelector(".font-btn-wrapper .font-style:nth-child(2)");
+const fontFamilyOptions = Array.from(document.getElementsByClassName("font-family"));
+const modeBtnOptions = Array.from(document.getElementsByClassName("mode-btn"))
 
 const CANVAS_WIDTH = 800;
 const CANVAS_HEIGHT = 800;
@@ -26,6 +28,42 @@ let isPainting = false;
 let isFilling = false;
 let fontSize = 68;
 let isFillStyle = false;
+let fontFamily = "sans";
+let mode = 'Draw';
+
+class Stack {
+  constructor() {
+    this.arr = [];
+    this.index = -1;
+  }
+  push(item) {
+    this.index++;
+    this.arr[this.index] = item;
+  }
+  pop() {
+    if (this.index < 0) return null;
+    this.index--;
+    const result = this.arr[this.index];
+    return result;
+  }
+}
+let undoList = new Stack();
+
+undoBtn.addEventListener("click", () => {
+  let image = new Image();
+  let imagePath = undoList.pop();
+  if (imagePath) {
+    image.src = imagePath;
+    image.onload = () => {
+      ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+      ctx.drawImage(image, 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+    };
+  } else {
+    ctx.fillStyle = "white"
+    ctx.fillRect(0,0, CANVAS_WIDTH, CANVAS_HEIGHT)
+    ctx.fillStyle = colorValue;
+  }
+})
 
 function onMove(event) { //mousemove
   if(isPainting) {
@@ -36,13 +74,16 @@ function onMove(event) { //mousemove
   ctx.moveTo(event.offsetX, event.offsetY);
 }
 canvas.addEventListener("mousedown", () => {
-  if (!isFilling) {
+  if (mode === 'Draw') {
     isPainting = true;
   }
 })
 canvas.addEventListener("mouseup", () => {
   ctx.beginPath();
   isPainting = false;
+  if (mode === 'Draw') {
+    undoList.push(canvas.toDataURL());
+  }
 })
 canvas.addEventListener("mouseleave", () => {
   ctx.beginPath();
@@ -61,18 +102,38 @@ colorOptions.forEach((colo) => colo.addEventListener("click", (event) => {
   ctx.fillStyle = colorValue;
   color.value = colorValue;
 }));
-modeBtn.addEventListener("click", () => {
-  if(isFilling) {
-    isFilling = false
-    modeBtn.innerText = 'Fill'
-  } else {
-    isFilling = true
-    modeBtn.innerText = "Draw"
-  }
-})
-canvas.addEventListener("click", () => {
-  if(isFilling) {
+fontFamilyOptions.forEach((family) => family.addEventListener("click", (event) => {
+  fontFamilyOptions.forEach((element) => {
+    element.style.backgroundColor = "#3498db";
+  });
+  fontFamily = event.target.innerHTML;
+  family.style.backgroundColor = "blue"
+}));
+modeBtnOptions.forEach((mod) => mod.addEventListener("click", (event) => {
+  modeBtnOptions.forEach((element) => {
+    element.style.backgroundColor = '#3498db';
+  });
+  mode = event.target.innerHTML;
+  mod.style.backgroundColor = "blue";
+}));
+canvas.addEventListener("click", (event) => {
+  if(mode === 'Fill') {
     ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT)
+  } else if (mode === 'Text') {
+    const text = textInput.value;
+    if (text !== "") {
+      ctx.save(); // save current state
+      ctx.lineWidth = 1;
+      ctx.font = `${fontSize}px ${fontFamily}`
+      if (isFillStyle) {
+        ctx.fillText(text, event.offsetX, event.offsetY)
+      } else ctx.strokeText(text, event.offsetX, event.offsetY)
+      // ctx.lineWidth = lineWidth.value
+      ctx.restore();
+    }
+  }
+  if (mode !== 'Draw') {
+    undoList.push(canvas.toDataURL());
   }
 })
 destroyBtn.addEventListener("click", () => {
@@ -101,30 +162,6 @@ file.addEventListener("change", (event) => {
     fileInput.value = null;
   }
 })
-canvas.addEventListener("dblclick", (event) => {
-  const text = textInput.value;
-    if (text !== "") {
-      ctx.save(); // save current state
-      ctx.lineWidth = 1;
-      ctx.font = `${fontSize}px serif`
-      if (isFillStyle) {
-        ctx.fillText(text, event.offsetX, event.offsetY)
-      } else ctx.strokeText(text, event.offsetX, event.offsetY)
-      // ctx.lineWidth = lineWidth.value
-      ctx.restore();
-    }
-  // const text = textInput.value;
-  // if(text !== '') {
-  //   ctx.save(); // save current state
-  //   ctx.lineWidth = 1;
-  //   ctx.font = "68px serif"
-  //   // ctx.strokeText(text, event.offsetX, event.offsetY)
-  //   ctx.fillText(text, event.offsetX, event.offsetY)
-  //   console.log('doubleclick')
-  //   // ctx.lineWidth = lineWidth.value
-  //   ctx.restore();
-  // }
-})
 fontSizeRange.addEventListener("change", (event) => {
   fontSize = event.target.value;
 })
@@ -145,7 +182,5 @@ function onSaveClick() {
   a.download = "myDrawing.png"
   a.click();
 }
-
-// canvas.addEventListener("dblclick", onDoubleClick);
 canvas.addEventListener("mousemove", onMove);
 saveBtn.addEventListener("click", onSaveClick);

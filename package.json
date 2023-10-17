@@ -1,7 +1,4 @@
 {
-  "devDependencies": {
-    "tailwindcss": "^3.3.3"
-  },
   "name": "meme-maker",
   "version": "1.0.0",
   "main": "app.js",
