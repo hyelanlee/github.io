@@ -4,12 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meme Maker</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="public/styles.css?after" />
 </head>
 <body>
-  <h1>My Canvas</h1>
-  <!-- <div class="container"> -->
-    <div  class="color-wrapper">
+  <h1 class="text-3xl font-bold underline">My Canvas</h1>
+  <div  class="color-wrapper">
       <input type="color" id="color" />
       <div class="color-option" style="background-color: #1abc9c" data-color="#1abc9c"></div>
       <div class="color-option" style="background-color: #3498db" data-color="#3498db"></div>
@@ -44,7 +43,6 @@
       <input type="text" placeholder="write and then double click" id="text" />
       <button id="save">Save image</button>
     </div>
-  <!-- </div> -->
-  <script src="app.js"></script>
+  <script src="src/app.js"></script>
 </body>
 </html>

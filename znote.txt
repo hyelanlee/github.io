@@ -1,0 +1,11 @@
+https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D
+
+https://flatuicolors.com/
+
+express is NodeJs framwork, koa, MongoDB
+Phyton Flask, django
+ReactJs
+Typescript, nest, NextJs
+ReactNative
+
+npx tailwindcss -i ./src/styles.css -o ./public/styles.css --watch
