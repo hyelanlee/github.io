@@ -1,28 +1,32 @@
 export function addImg(img, i) {
-  const modalBody = document.querySelector('.modal-body');
   const imgElement  = document.createElement('img');
+  const modalBody = document.querySelector('.modal-body');
+  const modalP = document.querySelector('.modal-p');
+ 
     imgElement.src = img.url;
     imgElement.style.width = '100%';
     imgElement.style.height = '100%';
     imgElement.style.objectFit = 'cover';
-  
-    if (img.url.includes('v')) {
-      imgElement.style.gridRow = 'span 2';
-    } else if (img.url.includes('b')) {
+    
+    if (img.url.includes('-b')) {
       imgElement.style.gridRow = 'span 2';
       imgElement.style.gridColumn = 'span 2';
-    } else if (img.url.includes('h')) {
-      imgElement.style.gridColumn = 'span 2';
-    }  
+    } 
     imgElement.addEventListener("click", () => {
       const modal = new bootstrap.Modal(document.getElementById('exampleModal'));
-      const modalTitle = document.getElementById("exampleModalLabel")
-      modalTitle.innerHTML = img.desc;
+      const modalTitle = document.getElementById("exampleModalLabel");
       const modalImg = document.createElement('img');
       modalImg.src = img.url;
-      modalImg.style.height = '100px';
-      modalImg.style.width = '75px';
+      if (window.innerWidth <= 768) {
+        modalImg.style.height = '100px';
+        modalImg.style.width = '75px';
+      } else {
+        modalImg.style.height = '200px';
+        modalImg.style.width = '150px';
+      }
       modalImg.style.borderRadius = '5px';
+      modalTitle.innerHTML = img.title;
+      modalP.innerHTML = `${img.desc} - ${img.date}`;
       modalBody.innerHTML = '';
       modalBody.appendChild(modalImg);
       modal.show();

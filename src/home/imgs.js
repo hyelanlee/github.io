@@ -1,62 +1,75 @@
 const img = [
   {
-    desc: 'aaaaaaa',
-    url: '/imgBooks/1.jpg',
+    title: '아버지의 해방일지',
+    desc: `The novel begins with the sentence 'Father died.'`,
+    url: '/imgBooks/1아버지의해방일지.jpg',
+    date: 'October 2023'
   },
   {
-    desc: 'bbb',
-    url: '/imgBooks/2.jpg',
+    title: '작별인사',
+    desc: `A young boy, who was peacefully living with his father, a renowned IT company researcher, encounters unfamiliar threats and chaos, facing a new world.`,
+    url: '/imgBooks/2작별인사.jpg',
+    date: 'October 2023'
   },
   {
-    desc: 'cccccc',
-    url: '/imgBooks/3.jpg',
+    title: 'WHERE THE CRAWDADS SING ⭐⭐⭐',
+    desc: `The sentences are so beautiful. When I see Kya waiting for her mother, my heart truly aches, but when I see Kya growing up so bravely, I find solace in life.`,
+    url: '/imgBooks/3where-b.jpg',
+    date: 'October 2023'
   },
   {
-    desc: 'ddddddddddddddddddd',
-    url: '/imgBooks/4.jpg',
+    title: 'STONER ⭐⭐⭐',
+    desc: `The more you read, the deeper the meaning of the book becomes.`,
+    url: '/imgBooks/4stoner-b.jpg',
+    date: 'October 2023'
   },
   {
-    desc: 'eee',
-    url: '/imgBooks/5v.jpg',
+    title: 'COSMOS',
+    desc: `Humanity and the universe are fundamentally connected and we are just dust`,
+    url: '/imgBooks/5cosmos.jpg',
+    date: 'August 2023'
   },
   {
-    desc: 'fffffffffffffffffff',
-    url: '/imgBooks/6b.jpg',
+    title: 'COSMOS POSSIBEL WORLDS',
+    desc: `It satisfied my intellectual curiosity.`,
+    url: '/imgBooks/6cosmosPossible.jpg',
+    date: 'September 2023'
   },
   {
-    desc: 'ggggggggggggggggggg',
-    url: '/imgBooks/7h.png',
+    title: 'THE VERGE ⭐⭐⭐',
+    desc: `I learned about the medieval era that I wasn't interested in, and a new window to the world opened for me.`,
+    url: '/imgBooks/7theverge-b.jpg',
+    date: 'September 2023'
   },
   {
-    desc: 'hhhhhhhhhhhhhhhhh',
-    url: '/imgBooks/8b.jpg',
+    title: 'RENAISSANCE MILITARY MEMOIRS',
+    desc: `In fact, medieval knights were not heroes. They were individuals who killed many people for empty honor.`,
+    url: '/imgBooks/8renaissance.jpg',
+    date: 'September 2023'
   },
   {
-    desc: 'iiiiiiiiiiiiiiiiiii',
-    url: '/imgBooks/9h.jpg',
+    title: 'ONE DAY IN THE LIFE OF IVAN DENISOVICH',
+    desc: `It pains my heart that I cannot help the suffering that occurred in different times and places.`,
+    url: '/imgBooks/9iban.jpg',
+    date: 'September 2023'
   },
   {
-    desc: 'gggggggggggggggggggg',
-    url: '/imgBooks/10b.jpg',
+    title: '인생의 역사',
+    desc: `Books provide deep insights into life.`,
+    url: '/imgBooks/10인생의역사.jpg',
+    date: 'August 2023'
   },
   {
-    desc: 'kkkkkkkkkkkkkkkkkkk',
-    url: '/imgBooks/11h.png',
+    title: 'GENTLE MAN IN MOSCOW',
+    desc: `The book is very elegant, and it contains many sentences that offer a substantial glimpse into life.`,
+    url: '/imgBooks/11gentleman.jpg',
+    date: 'August 2023'
   },
   {
-    desc: 'llllllllllllllllllllll',
-    url: '/imgBooks/12.png',
+    title: 'CAMINO ISLAND',
+    desc: `Who on earth could be in possession of that manuscript? I couldn't let go of the book while thinking about it.`,
+    url: '/imgBooks/12camino.jpg',
+    date: 'May 2023'
   },
-  {
-    desc: 'mmmmmmmmmmmmmmmmmmmmm',
-    url: '/imgBooks/13h.png',
-  },
-  // '/imgBooks/14h.png',
-  // '/imgBooks/15h.png',
-  // '/imgBooks/16.jpg',
-  // '/imgBooks/17v.png',
-  // '/imgBooks/18v.png',
-  // '/imgBooks/19v.png',
-  // '/imgBooks/20v.png',
 ]
 export default img;

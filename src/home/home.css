@@ -16,9 +16,10 @@ section .box:nth-child(2n) {background: blue;} */
 .container {
   display: grid;
   grid-gap: 5px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-  grid-auto-rows: 150px;
+  grid-template-columns: repeat(auto-fit, minmax(75px, 1fr)); 
+  grid-auto-rows: 100px;
   grid-auto-flow: dense;
+  overflow: hidden;
 }
 header {
   padding-top: 10.5rem;
@@ -30,11 +31,22 @@ header {
   background-position: center center;
   background-size: cover;
 }
+.quotes {
+  /* background-image: url('../../img/coffeeBook.jpg'); */
+  /* background-size: cover; */
+}
+.quotes > div {
+  /* color: aliceblue; */
+}
 .lead {
   margin-left: 1rem;
 }
 @media (min-width: 768px) {
   .lead {
     margin-left: 5rem;
+  }
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-auto-rows: 200px;
   }
 }
