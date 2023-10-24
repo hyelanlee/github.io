@@ -2,3 +2,24 @@
   display: grid;
   grid-gap: 1rem;
 }
+@keyframes animateRect {
+  from {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
+#carouselExampleIndicators h5, p{
+  /* padding-top: 50%;
+  animation: animateRect;
+  animation-timeline: scroll(); */
+  color: black;
+}
+.certificate {
+  animation: animateRect;
+  animation-timeline: scroll();
+
+}
