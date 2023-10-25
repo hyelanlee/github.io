@@ -71,5 +71,35 @@ const img = [
     url: '/imgBooks/12camino.jpg',
     date: 'May 2023'
   },
+  {
+    title: 'MIROIR DE NOS PEINES',
+    desc: `This completes Pierre Lemaitre's war trilogy. It's enjoyable once again.`,
+    url: '/imgBooks/13MIROIR.jpg',
+    date: 'May 2023'
+  },
+  {
+    title: '열두 발자국',
+    desc: `This book was one that helped me make wiser choices when I stood at crossroads in my life.`,
+    url: '/imgBooks/14열두발자국.jpg',
+    date: 'April 2023'
+  },
+  {
+    title: '셔터를 올리며',
+    desc: `The author, along with their family's history, described the modern history of Korea. It was a great opportunity for me to indirectly experience an era I didn't live in.`,
+    url: '/imgBooks/15셔터를올리며.jpg',
+    date: 'April 2023'
+  },
+  {
+    title: '해바라기가 피지 않는 여름',
+    desc: `I thoroughly enjoyed reading it, but after finishing it, I thought, "What was that?" The author left the readers somewhat bewildered.`,
+    url: '/imgBooks/15해바라기.jpg',
+    date: 'April 2023'
+  },
+  {
+    title: 'Cry of the Kalahari ⭐⭐⭐',
+    desc: `This is the story of two zoologists who spent nearly 8 years observing wildlife in Kalahari. Hats off to their courage. The vivid descriptions made it feel like Kalahari was right in front of my eyes. I truly hope that many people read this book and enhance their ability to empathize with animals.`,
+    url: '/imgBooks/17칼라하리-b.jpg',
+    date: 'April 2023'
+  },
 ]
 export default img;
