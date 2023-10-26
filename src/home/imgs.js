@@ -74,7 +74,7 @@ const img = [
   {
     title: 'MIROIR DE NOS PEINES',
     desc: `This completes Pierre Lemaitre's war trilogy. It's enjoyable once again.`,
-    url: '/imgBooks/13MIROIR.jpg',
+    url: '/imgBooks/13miroir.jpg',
     date: 'May 2023'
   },
   {
@@ -100,6 +100,30 @@ const img = [
     desc: `This is the story of two zoologists who spent nearly 8 years observing wildlife in Kalahari. Hats off to their courage. The vivid descriptions made it feel like Kalahari was right in front of my eyes. I truly hope that many people read this book and enhance their ability to empathize with animals.`,
     url: '/imgBooks/17칼라하리-b.jpg',
     date: 'April 2023'
+  },
+  {
+    title: 'Disfigured: On Fairy Tales, Disability, and Making Space',
+    desc: `If someone is ugly or disabled, it is not desirable to be portrayed as a villain in movies or fairy tales. Everyone should realize that this can instill wrong prejudices in the minds of children.`,
+    url: '/imgBooks/18휠체어.jpg',
+    date: 'April 2023'
+  },
+  {
+    title: '언러키 스타트업',
+    desc: `You can see how much the power of the current 2030 generation has grown in society. It was a delightful reading experience.`,
+    url: '/imgBooks/19언러키.jpg',
+    date: 'March 2023'
+  },
+  {
+    title: '아무튼, 현수동',
+    desc: `I have thought about where I would like to live and what kind of neighbors I would like to have.`,
+    url: '/imgBooks/19현수동.jpg',
+    date: 'March 2023'
+  },
+  {
+    title: 'ON THE MOVE',
+    desc: `Through Oliver Sacks' autobiography, I could imagine the United States and the United Kingdom of the era in which he lived. He was fortunate to be born into an affluent family and had a talent for writing. It seems that he was more attached to his sexual identity than the privilege he possessed.`,
+    url: '/imgBooks/21onthemove.jpg',
+    date: 'March 2023'
   },
 ]
 export default img;
