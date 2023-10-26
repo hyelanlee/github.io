@@ -31,13 +31,6 @@ header {
   background-position: center center;
   background-size: cover;
 }
-.quotes {
-  /* background-image: url('../../img/coffeeBook.jpg'); */
-  /* background-size: cover; */
-}
-.quotes > div {
-  /* color: aliceblue; */
-}
 .lead {
   margin-left: 1rem;
 }
@@ -49,4 +42,16 @@ header {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     grid-auto-rows: 200px;
   }
+}
+@keyframes imgScroll {
+  from {
+    background-position-y: 10%;
+  }
+  to {
+    background-position-y: 50%;
+  }
+}
+header {
+  animation: imgScroll;
+  animation-timeline: scroll();
 }
