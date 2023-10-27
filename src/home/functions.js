@@ -7,6 +7,7 @@ export function addImg(img, i) {
     imgElement.style.width = '100%';
     imgElement.style.height = '100%';
     imgElement.style.objectFit = 'cover';
+    imgElement.style.cursor = 'pointer';
     
     if (img.url.includes('-b')) {
       imgElement.style.gridRow = 'span 2';

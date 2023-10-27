@@ -125,5 +125,29 @@ const img = [
     url: '/imgBooks/21onthemove.jpg',
     date: 'March 2023'
   },
+  {
+    title: 'The Guernsey Literary and Potato Peel Pie Society',
+    desc: `I think, reading books can give us the strength to overcome real-life challenges, just like the members of the Guernsy society.`,
+    url: '/imgBooks/22건지.jpg',
+    date: 'March 2023'
+  },
+  {
+    title: 'ISABELL THE AFTERNOON',
+    desc: `The passionate and heart-wrenching love story between Isabelle, a married French woman, and Sam, a young American college student. Through the love of these two, the author continuously poses questions to the readers about what life is to us... And what love is...`,
+    url: '/imgBooks/23sabelle.jpg',
+    date: 'February 2023'
+  },
+  {
+    title: "WHY FISH DON'T EXIST",
+    desc: `Author Lulu Miller humorously pinches at the idea that someone we hold in high regard, a so-called 'hero,' might be quite inadequate when seen through the lens of today's values. It's an entertaining book that leaves me with a sense of delight.`,
+    url: '/imgBooks/24whyfish.jpg',
+    date: 'February 2023'
+  },
+  {
+    title: "TEMPTATION",
+    desc: `The main character lived as an unknown writer for ten years, and suddenly became a popular Hollywood writer. He were overwhelmed by busyness and the sudden flood of attention. Then, one day, he were suddenly embroiled in a plagiarism controversy. My emotions rose and fell along with the main character's success and failure.`,
+    url: '/imgBooks/25temptation.jpg',
+    date: 'February 2023'
+  },
 ]
 export default img;
