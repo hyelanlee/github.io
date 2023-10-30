@@ -149,5 +149,77 @@ const img = [
     url: '/imgBooks/25temptation.jpg',
     date: 'February 2023'
   },
+  {
+    title: "Offer Utan Ansikte | 얼굴 없는 살인자",
+    desc: ``,
+    url: '/imgBooks/26noface.jpg',
+    date: 'February 2023'
+  },
+  {
+    title: "THE DEAD HEART",
+    desc: ``,
+    url: '/imgBooks/27deadheart.jpg',
+    date: 'February 2023'
+  },
+  {
+    title: "THE MOMENT",
+    desc: ``,
+    url: '/imgBooks/28moment.jpg',
+    date: 'January 2023'
+  },
+  {
+    title: "Behind Closed Doors",
+    desc: ``,
+    url: '/imgBooks/29behindClosedDoors.jpg',
+    date: 'January 2023'
+  },
+  {
+    title: "잔류인구",
+    desc: ``,
+    url: '/imgBooks/30잔류인구.jpg',
+    date: 'January 2023'
+  },
+  {
+    title: "당인리: 대정전 후 두 시간",
+    desc: ``,
+    url: '/imgBooks/31당인리.jpg',
+    date: 'January 2023'
+  },
+  {
+    title: "A KILLER'S MIND",
+    desc: ``,
+    url: '/imgBooks/32killermind.jpg',
+    date: 'January 2023'
+  },
+  {
+    title: "책, 이게뭐라고",
+    desc: ``,
+    url: '/imgBooks/33책이게뭐라고.jpg',
+    date: 'January 2023'
+  },
+  {
+    title: "표백",
+    desc: ``,
+    url: '/imgBooks/34표백.jpg',
+    date: 'January 2023'
+  },
+  {
+    title: "RULE OF THE ROBOTS",
+    desc: ``,
+    url: '/imgBooks/35ruleoftherobots.jpg',
+    date: 'January 2023'
+  },
+  {
+    title: "The Road to Wigan Pier",
+    desc: ``,
+    url: '/imgBooks/36roadtowigan.jpg',
+    date: 'January 2023'
+  },
+  {
+    title: " ぼくはイエロ-でホワイトで,ちょっとブル 나는 옐로에 화이트에 약간 블루",
+    desc: ``,
+    url: '/imgBooks/37yellow.jpg',
+    date: 'January 2023'
+  },
 ]
 export default img;
