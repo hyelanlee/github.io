@@ -1,0 +1,27 @@
+.img_wrapper {
+  /* grid-template-columns: repeat(auto-fill, minmax(110%, 1fr)); 110% 크기의 열을 생성하고, 빈 공간을 균등하게 나눔 */
+  gap: 10px; 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-auto-rows: 500px;
+  grid-auto-flow: dense;
+  overflow: hidden;
+  margin: 1rem;
+}
+.img_wrapper div {
+  /* background-color: aqua; */
+  text-align: center;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(235,221,226,1) 65%);
+  color: white;
+}
+.img_wrapper div h3 {
+  padding: 1rem;
+  white-space: nowrap;
+}
+body {
+  margin-left: 10rem;
+}
+
+

@@ -1,5 +1,11 @@
 const img = [
   {
+    title: 'Morning and Evening',
+    desc: `I am now able to confront the fears that were in my subconscious. It seems that I might be less afraid now.`,
+    url: '/imgBooks/38morning.jpg',
+    date: 'October 2023'
+  },
+  {
     title: '아버지의 해방일지',
     desc: `The novel begins with the sentence 'Father died.'`,
     url: '/imgBooks/1아버지의해방일지.jpg',

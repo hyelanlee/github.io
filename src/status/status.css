@@ -1,0 +1,13 @@
+.card {
+  background-image: url('../../img/header-bg.jpg');
+  background-position: center center;
+  background-size: cover;
+}
+.card * {
+  color: white;
+}
+@media (min-width: 768px) {
+  .card {
+    margin: 0 5rem;
+  }
+}
