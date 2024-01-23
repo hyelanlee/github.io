@@ -10,7 +10,7 @@
 .img_wrapper div {
   /* background-color: aqua; */
   text-align: center;
-  padding: 1rem;
+  /* padding: 1rem; */
   border-radius: 1rem;
   background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(235,221,226,1) 65%);
   color: white;

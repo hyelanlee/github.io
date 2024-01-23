@@ -21,19 +21,13 @@ window.onscroll = function() {
   console.log(window.innerHeight , window.scrollY,document.body.offsetHeight)
   if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
 const imgElementCount = document.querySelector('.container').querySelectorAll('img').length;
-console.log('condition true')
 
-    // setTimeout(function() {
       img.forEach((img, i) => {
         if ((i >= currentImageCount ) && ( i < currentImageCount + increaseNumber )) {
-          // if ( imgElementCount <= i && i < (imageCount + increaseNumber) ) {
           addImg(img, i);
-          console.log('hit', i)
         }
       })
-      // imageCount += increaseNumber;
       currentImageCount += increaseNumber
-    // }, 2300)
   }
   // return;
 }
